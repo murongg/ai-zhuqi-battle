@@ -1,9 +1,10 @@
 # AI诸棋混战（Next.js）
 
-当前支持两种模式：
+当前支持三种模式：
 
 - 五子棋（15x15）
 - 中国象棋（9x10）
+- 国际象棋（8x8）
 
 两种模式均为双 AI 对战，且都需要你在左右侧面板分别输入：
 
@@ -32,9 +33,11 @@ pnpm dev
 
 ## 主要目录
 
-- `app/GameHubClient.tsx`：游戏模式切换（五子棋 / 中国象棋）
+- `app/GameHubClient.tsx`：游戏模式切换（五子棋 / 中国象棋 / 国际象棋）
 - `app/GomokuClient.tsx`：五子棋前端逻辑
 - `app/XiangqiClient.tsx`：象棋前端逻辑
+- `app/ChessClient.tsx`：国际象棋前端逻辑
 - `app/api/llm/move/route.ts`：LLM 服务端调用（Vercel AI SDK）
 - `lib/gomoku/*`：五子棋提示词/解析/会话等
 - `lib/xiangqi/*`：象棋规则、棋盘绘制、提示词、解析等
+- `lib/chess/*`：国际象棋规则、棋盘绘制、提示词、解析等
